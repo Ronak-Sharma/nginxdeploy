@@ -8,4 +8,13 @@ node {
     /* This builds the actual image */
     app = docker.build("nginx:v1")
   }
+  stage('Deploy Nginx ') {
+    /* This will deploy nginx image using Kubernetes*/
+    steps {
+      sh """
+        kubectl create -f nginx-service.yaml
+        kubectl create -f nginx-deployment.yaml
+      """
+    app = docker.build("nginx:v1")
+  }
 }
