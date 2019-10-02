@@ -10,6 +10,7 @@ Prerequisites
 
 
 Installation process
+
 	1) yum update -y
 	2) sudo yum install docker -y
 	3) systemctl start docker.service
