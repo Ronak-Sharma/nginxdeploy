@@ -15,6 +15,5 @@ node {
         kubectl create -f nginx-service.yaml
         kubectl create -f nginx-deployment.yaml
       """
-    app = docker.build("nginx:v1")
   }
 }
